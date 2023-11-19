@@ -1,14 +1,14 @@
 // This is an implementation for finding the missing element in a given array.
 public class PermMissingElem {
     public static int findMissing(int arr[]){
-        int actual_sum = 0;
-        int expected_sum = 0;
-        int max_number = arr.length + 1;
+        long actual_sum = 0;
+        long expected_sum = 0;
+        long max_number = arr.length + 1;
         for(int i:arr){
             actual_sum += i;
         }
         expected_sum = (max_number*(max_number+1)/2);
-        return expected_sum - actual_sum;
+        return (int) (expected_sum - actual_sum);
 
     }
 
